@@ -22,11 +22,11 @@ jobs:
     - name: Build & Push Auth Service
       run: |
         cd auth-service
-        docker build -t ${{ secrets.DOCKER_USERNAME }}/auth-service:latest .
+        docker build -t ${{ secrets.DOCKER_USERNAME }}/auth-service:latest ./auth-service
         docker push ${{ secrets.DOCKER_USERNAME }}/auth-service:latest
 
     - name: Build & Push Product Service
       run: |
         cd product-service
-        docker build -t ${{ secrets.DOCKER_USERNAME }}/product-service:latest .
+        docker build -t ${{ secrets.DOCKER_USERNAME }}/product-service:latest ./product-service
         docker push ${{ secrets.DOCKER_USERNAME }}/product-service:latest
