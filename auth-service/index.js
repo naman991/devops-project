@@ -4,7 +4,7 @@ const app = express();
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("Auth Service Runnning ");
+  res.send("Auth Service v2 ");
 });
 
 app.get("/login", (req, res) => {
