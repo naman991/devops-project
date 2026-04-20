@@ -20,13 +20,14 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Build & Push Auth Service
+      working-directory: ./auth-service
       run: |
         cd auth-service
-        docker build -t ${{ secrets.DOCKER_USERNAME }}/auth-service:latest ./auth-service
+        docker build -t ${{ secrets.DOCKER_USERNAME }}/auth-service:latest .
         docker push ${{ secrets.DOCKER_USERNAME }}/auth-service:latest
 
     - name: Build & Push Product Service
+      working-directory: ./product-service
       run: |
-        cd product-service
-        docker build -t ${{ secrets.DOCKER_USERNAME }}/product-service:latest ./product-service
+        docker build -t ${{ secrets.DOCKER_USERNAME }}/product-service:latest .
         docker push ${{ secrets.DOCKER_USERNAME }}/product-service:latest
