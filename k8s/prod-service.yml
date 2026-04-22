@@ -3,10 +3,9 @@ kind: Service
 metadata:
   name: product-service
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: product
   ports:
-    - port: 3001
+    - port: 80
       targetPort: 3001
-      nodePort: 30008

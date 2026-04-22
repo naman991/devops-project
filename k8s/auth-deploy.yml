@@ -15,6 +15,5 @@ spec:
       containers:
       - name: auth-container
         image: peingthepoder29/auth-service:latest
-        imagePullPolicy: Always
         ports:
         - containerPort: 3000

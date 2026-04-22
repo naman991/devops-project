@@ -13,8 +13,7 @@ spec:
         app: product
     spec:
       containers:
-      - name: product-container
-        image: product-service:latest
-        imagePullPolicy: Never
+      - name: product
+        image: peingthepoder29/product-service:latest
         ports:
         - containerPort: 3001

@@ -14,6 +14,6 @@ app.get("/products", (req,res) => {
 });
 
 const PORT = 3001;
-app.listen(PORT, () => {
+app.listen(3001, '0.0.0.0', () => {
   console.log(`Product service running on port ${PORT}`);
 });
